@@ -7,6 +7,7 @@ strategy:
     Ubuntu_Python36:
       imageName: 'ubuntu-16.04'
       pythonVer: '3.6'
+      runCoverage: 'true'
     Ubuntu_Python37:
       imageName: 'ubuntu-16.04'
       pythonVer: '3.7'
@@ -39,9 +40,15 @@ steps:
   inputs:
     versionSpec: $(pythonVer)
     architecture: 'x64'
-- script: python -m pip install --upgrade pip setuptools wheel pytest
+- script: python -m pip install --upgrade pip setuptools wheel
   displayName: Update pip
-- script: python -m pip install .
+- script: python -m pip install -e .[dev]
   displayName: Install water_demand
 - script: python -m pytest -v
   displayName: Unit tests
+- script: python -m pytest --cov
+  displayName: Run coverage
+  condition: eq($(runCoverage), 'true')
+- script: bash <(curl https://codecov.io/bash) -t c643cd07-1ce3-41ed-a452-875968d4dcbb
+  displayName: Upload to codecov
+  condition: eq($(runCoverage), 'true')

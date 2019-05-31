@@ -57,6 +57,8 @@ setup(
         'dev': [
             'flake8>=3',            # For code style checking
             'pytest',               # For unit tests
+            'pytest-cov',           # For coverage
+            'codecov',              # For coverage
         ],
     },
 )
