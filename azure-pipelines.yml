@@ -48,7 +48,7 @@ steps:
   displayName: Unit tests
 - script: python -m pytest --cov
   displayName: Run coverage
-  condition: eq($(runCoverage), 'true')
+  condition: eq(variables['runCoverage'], 'true')
 - script: bash <(curl https://codecov.io/bash) -t c643cd07-1ce3-41ed-a452-875968d4dcbb
   displayName: Upload to codecov
-  condition: eq($(runCoverage), 'true')
+  condition: eq(variables['runCoverage'], 'true')
