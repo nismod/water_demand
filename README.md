@@ -1,5 +1,8 @@
 [![Build Status](https://dev.azure.com/FergusCooper/Nismod2%20Water%20Demand/_apis/build/status/nismod.water_demand?branchName=master)](https://dev.azure.com/FergusCooper/Nismod2%20Water%20Demand/_build/latest?definitionId=3&branchName=master)
 [![codecov](https://codecov.io/gh/nismod/water_demand/branch/master/graph/badge.svg)](https://codecov.io/gh/nismod/water_demand)
+![GitHub](https://img.shields.io/github/license/nismod/water_demand.svg?color=blue)
+![Python](https://img.shields.io/badge/python-3.5%20%7C%203.6%20%7C%203.7-blue.svg)
+![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20Linux%20%7C%20macOS-blue.svg)
 
 # A basic water demand model
 

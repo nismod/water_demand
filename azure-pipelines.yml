@@ -46,6 +46,8 @@ steps:
   displayName: Install water_demand
 - script: python -m pytest -v
   displayName: Unit tests
+- script: python -m flake8
+  displayName: flake8 tests
 - script: python -m pytest --cov
   displayName: Run coverage
   condition: eq(variables['runCoverage'], 'true')
