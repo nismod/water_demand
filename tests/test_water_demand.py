@@ -6,6 +6,7 @@ from water_demand import WaterDemand
 
 
 def test_valid_construction():
+    """ Test ways in which we expect the class to be used. """
 
     # Valid ways of specifying population
     p_i = [1, 2, 3, 4]
@@ -49,6 +50,7 @@ def test_valid_construction():
 
 
 def test_invalid_construction():
+    """ Test explicitly invalidated methods of construction """
 
     pop = [1.23, 2.34, 3.45]
 
@@ -64,6 +66,7 @@ def test_invalid_construction():
 
 
 def test_simulate():
+    """ Test the most general case with specific values """
 
     pop = [1.23, 2.34, 3.45, 4.56]
     scale = [5.67, 6.78, 7.89, 9.01]
