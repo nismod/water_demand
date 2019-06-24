@@ -41,7 +41,7 @@ setuptools.setup(
     url='https://github.com/nismod/water_demand',
 
     # Packages to include
-    packages=setuptools.find_packages(include='water_demand'),
+    packages=setuptools.find_packages(),
 
     # Metadata to help PIP
     classifiers=[
