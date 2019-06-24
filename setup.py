@@ -3,8 +3,7 @@
 #
 
 import os
-
-from setuptools import setup, find_packages
+import setuptools
 
 
 def get_description():
@@ -21,7 +20,7 @@ def get_version():
         return f.read().strip()
 
 
-setup(
+setuptools.setup(
     # Module name (lowercase)
     name='water_demand',
     version=get_version(),
@@ -29,6 +28,7 @@ setup(
     # Description
     description='Water demand model for Nismod2',
     long_description=get_description(),
+    long_description_content_type="text/markdown",
 
     # License name
     license='MIT license',
@@ -41,7 +41,14 @@ setup(
     url='https://github.com/nismod/water_demand',
 
     # Packages to include
-    packages=find_packages(include='water_demand'),
+    packages=setuptools.find_packages(include='water_demand'),
+
+    # Metadata to help PIP
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
 
     # Include non-python files (via MANIFEST.in)
     include_package_data=True,
