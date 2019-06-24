@@ -10,8 +10,7 @@ A basic water demand model, where demand is a scalar multiple of population.
 
 ## Installation (user)
 ```
-git clone git@github.com:nismod/water_demand.git
-pip install .
+pip install git+https://github.com/nismod/water_demand.git@master#egg=water_demand
 ```
 
 ## Installation (developer)
