@@ -21,9 +21,10 @@ pip install -e .[dev,docs]
 
 ## Basic usage
 
-Create an instance of the `WaterDemand` class, constructing it with a sequence representing populations and a number or sequence representing the linear relationship between population and water demand.
+Create an instance of the `WaterDemand` class, constructing it with a sequence representing populations, a number or sequence representing the per capita water demand, and a number or sequence representing constant water demand.
+The water demand is calculated as `constant + per_capita * population`.
 
-### Single global demand coefficient
+### Global demand coefficients
 
 ```python
 import water_demand
@@ -32,11 +33,16 @@ import numpy as np
 # Define population (e.g. read from csv file)
 pop = np.random.normal(size=20)
 
-# Define the global scaling factor
-scale = 1.23
+# Define the global per capita and constant demands
+per_capita = 1.23
+constant = 2.34
 
 # Create the model
-model = water_demand.WaterDemand(population=pop, scale_factor=scale)
+model = water_demand.WaterDemand(
+    population=pop,
+    per_capita_demand=per_capita,
+    constant_demand=constant
+)
 
 # Simulate the water demand
 demand = model.simulate()
@@ -51,11 +57,16 @@ import numpy as np
 # Define population (e.g. read from csv file)
 pop = np.random.normal(size=20)
 
-# Define local scaling factors (e.g. read from csv file)
-scale = np.random.normal(size=20)
+# Define local demand coefficients (e.g. read from csv files)
+per_capita = np.random.normal(size=20)
+constant = np.random.normal(size=20)
 
 # Create the model
-model = water_demand.WaterDemand(population=pop, scale_factor=scale)
+model = water_demand.WaterDemand(
+    population=pop,
+    per_capita_demand=per_capita,
+    constant_demand=constant
+)
 
 # Simulate the water demand
 demand = model.simulate()
