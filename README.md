@@ -71,3 +71,29 @@ model = water_demand.WaterDemand(
 # Simulate the water demand
 demand = model.simulate()
 ```
+
+
+### Data sources
+
+
+
+>The baseline scenario (with BL suffix) represents 'business as usual'. This scenario reflects:
+>
+>- forecast changes to the amount of water available, through planned changes to abstraction
+>  licences and through reductions to supply from climate change
+>- continuation of current policies in demand management (including the committed leakage
+>  levels, metering policies and implementation of companies’ water efficiency plans)
+>- forecast changes to properties and population.
+>
+>For some companies, forecast demand exceeds the available supply over the planning period.
+>Where this occurs, a water company must propose schemes (termed 'options') to increase
+>supplies and/or reduce the demand for water.  Detailed option data is not included in this
+>dataset because it commercially sensitive.
+>
+>The final planning scenario(with FP suffix) represents the company's forecast supply and
+>demand as a result of the implementation of the additional supply and/or reduced demand
+>options incorporated into its forecasts. This is the scenario that represents what a water
+>company intends to doover the planning period to maintain the balance of supply and demand.
+
+Section 1.3 *Scenarios explained* in [Water Resources Planning Components
+Guide](https://data.gov.uk/dataset/fb38a40c-ebc1-4e6e-912c-bb47a76f6149/revised-draft-water-resources-management-plan-2019-supply-demand-data-at-company-level-2020-21-to-2044-45)
