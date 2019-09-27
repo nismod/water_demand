@@ -75,7 +75,37 @@ demand = model.simulate()
 
 ### Data sources
 
+Using 'Revised Draft Water Resources Management Plan 2019 Supply-Demand Data at Water Resource
+Zone Level 2020/21 to 2044/45'
 
+Provided by Environment Agency for research purposes (not shared publicly), last updated 09
+August 2019. See related company level dataset published on
+[gov.uk](https://data.gov.uk/dataset/fb38a40c-ebc1-4e6e-912c-bb47a76f6149/revised-draft-water-resources-management-plan-2019-supply-demand-data-at-company-level-2020-21-to-2044-45).
+
+Relevant variables:
+
+ea_code | measurement | unit
+--- | --- | ---
+11BL | Distribution input | Ml/d
+11FP | Distribution Input | Ml/d
+29BL | Measured Household - PCC | l/h/d
+29FP | Measured Household - PCC | l/h/d
+30BL | Unmeasured Household - PCC | l/h/d
+30FP | Unmeasured Household - PCC | l/h/d
+31BL | Average Household - PCC | l/h/d
+31FP | Average Household - PCC | l/h/d
+49BL | Measured Non Household - Population | 000's
+49FP | Measured Non Household - Population | 000's
+50BL | Unmeasured Non Household - Population | 000's
+50FP | Unmeasured Non Household - Population | 000's
+51BL | Measured Household - Population | 000's
+51FP | Measured Household - Population | 000's
+52BL | Unmeasured Household - Population | 000's
+52FP | Unmeasured Household - Population | 000's
+53BL | Total Resource Zone Population | 000's
+53FP | Total Resource Zone Population | 000's
+
+Note on scenarios:
 
 >The baseline scenario (with BL suffix) represents 'business as usual'. This scenario reflects:
 >
