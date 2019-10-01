@@ -120,7 +120,7 @@ Note on scenarios:
 >supplies and/or reduce the demand for water.  Detailed option data is not included in this
 >dataset because it commercially sensitive.
 >
->The final planning scenario(with FP suffix) represents the company's forecast supply and
+>The final planning scenario (with FP suffix) represents the company's forecast supply and
 >demand as a result of the implementation of the additional supply and/or reduced demand
 >options incorporated into its forecasts. This is the scenario that represents what a water
 >company intends to doover the planning period to maintain the balance of supply and demand.
