@@ -127,3 +127,16 @@ Note on scenarios:
 
 Section 1.3 *Scenarios explained* in [Water Resources Planning Components
 Guide](https://data.gov.uk/dataset/fb38a40c-ebc1-4e6e-912c-bb47a76f6149/revised-draft-water-resources-management-plan-2019-supply-demand-data-at-company-level-2020-21-to-2044-45)
+
+
+## Running in NISMOD
+
+This model is integrated with population scenarios and a water supply model in
+[nismod/nismod2](https://github.com/nismod/nismod2).
+
+```bash
+bash provision/get_data_water_demand.sh .
+bash provision/install_water_demand.sh .
+smif csv2parquet data/scenarios/water_demand/
+smif run -b batch/arc_wd.batch -i local_binary
+```
